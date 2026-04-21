@@ -20,7 +20,7 @@ class enemy{
     update(){
         this.top += 15;
         this.positionEnemy();
-        if(this.top > 700){
+        if(this.top > 610){
             this.top = 0;
             this.left = Math.floor(Math.random() * 600) + 1;
             this.positionEnemy();
