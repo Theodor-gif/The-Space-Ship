@@ -8,7 +8,7 @@ class game {
         this.screen.setAttribute("style",
             "height:100vh; overflow:hidden; display:flex; flex-direction:column;" +
             "align-items:center; background-image:linear-gradient(rgb(9,109,140), rgb(131,204,233))");
-        this.user   = new player(300, 610, '100px', '100px');
+        this.user   = new player(300, 600, '100px', '100px');
         this.enemy  = new enemy();
         this.lifes  = 3;
     }
@@ -34,7 +34,7 @@ class game {
         // --- Game screen container ---
         const gameScreen = document.createElement("div");
         gameScreen.setAttribute("style",
-            "border:30px solid white; width:700px; height:70vh;" +
+            "border:30px solid white; width:700px; height:700px;" +
             "background-image:url('./Images/background-image2.png');" +
             "position:relative; border-radius:20px; display:flex;" +
             "justify-content:start; align-items:center; flex-direction:column;");
@@ -121,7 +121,7 @@ class game {
                 firstMinutesDisplay.textContent = "0";
                 this.enemy.speed = 15;
                 this.user.x = 300;
-                this.user.y = 610;
+                this.user.y = 600;
                 this.user.playerPosition();
                 this.enemy.top  = 0;
                 this.enemy.left = Math.floor(Math.random() * 600) + 1;
@@ -148,7 +148,7 @@ class game {
                 // Clamp player inside game screen
                 if (this.user.y < 0)    this.user.y = 0;
                 if (this.user.x < 0)    this.user.x = 0;
-                if (this.user.y > 610)  this.user.y = 610;
+                if (this.user.y > 600)  this.user.y = 600;
                 if (this.user.x > 600)  this.user.x = 600;
  
                 this.user.playerPosition();
