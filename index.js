@@ -34,7 +34,7 @@ class game {
         // --- Game screen container ---
         const gameScreen = document.createElement("div");
         gameScreen.setAttribute("style",
-            "border:30px solid white; width:700px; height:1000px;" +
+            "border:30px solid white; width:700px; height:800px;" +
             "background-image:url('./Images/background-image2.png');" +
             "position:relative; border-radius:20px; display:flex;" +
             "justify-content:start; align-items:center; flex-direction:column;");
@@ -47,7 +47,7 @@ class game {
         gameButton.setAttribute("style",
             `font-family:"Bitcount Grid Double",system-ui;
              width:90%; color:white; display:flex; justify-content:space-evenly;
-             align-items:center; margin-top:20px; font-size:1.5rem;`
+             align-items:center; font-size:1.5rem;`
              );
         this.screen.appendChild(gameButton);
 
@@ -57,8 +57,7 @@ class game {
             <h1>The Space Ship</h1>`;
         gameTitle.setAttribute("style",
             `text-align:center; font-family:"Bitcount Grid Double",system-ui;
-             color:white; font-size:2rem; text-shadow:5px 5px 5px grey;
-             margin-bottom:100px;`);
+             color:white; font-size:2rem; text-shadow:5px 5px 5px grey;`);
         gameScreen.appendChild(gameTitle);
  
         // --- Start screen ---
@@ -149,7 +148,7 @@ class game {
                 // Clamp player inside game screen
                 if (this.user.y < 0)    this.user.y = 0;
                 if (this.user.x < 0)    this.user.x = 0;
-                if (this.user.y > 900)  this.user.y = 900;
+                if (this.user.y > 700)  this.user.y = 700;
                 if (this.user.x > 600)  this.user.x = 600;
  
                 this.user.playerPosition();
